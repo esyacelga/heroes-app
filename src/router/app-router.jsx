@@ -3,6 +3,7 @@ import {MarvelPage} from "../heroes/components/marvel-page.jsx";
 import {DcPage} from "../heroes/components/dc-page.jsx";
 import {LoginPage} from "../auth/components/login-page.jsx";
 
+
 export const router = createBrowserRouter([
     {
         path: "/*",
