@@ -1,10 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useNavigate} from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 function NavBarExample() {
+    const navigate = useNavigate();
+    const onlogout = () => {
+        navigate('/login', {replace: true});
+    }
     return (
+
         <>
             <Navbar expand="lg" className="navbar navbar-expand-sm navbar-dark bg-dark">
                 <Container>
@@ -18,8 +24,12 @@ function NavBarExample() {
                                       as={Link} to={"/marvel"}>Marvel</Nav.Link>
                             <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                                       as={Link} to={"/dc"}>DC</Nav.Link>
-                            <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
-                                      as={Link} to={"/login"}>login</Nav.Link>
+             {/*               <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
+                                      as={Link} to={"/login"}>login</Nav.Link>*/}
+                        </Nav>
+                        <Nav>
+                            <span className="nav-item nav-link text-primary"> Santiago</span>
+                            <Button className="nav-item nav-link btn" onClick={onlogout}>Cerrar sesión</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -28,7 +38,8 @@ function NavBarExample() {
                 <Outlet></Outlet>
             </section>
         </>
-    );
+    )
+        ;
 }
 
 export default NavBarExample;
