@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import NavBarExample from "../ui/components/nav-bar.jsx";
-import {DcPage, MarvelPage} from "../heroes/index.js";
+import {DcPage, HeroPage, MarvelPage} from "../heroes/index.js";
 import {LoginPage} from "../auth/index.js";
 
 
@@ -32,6 +32,11 @@ export const router = createBrowserRouter([
             {
                 path: "/dc",
                 element: <DcPage/>,
+            },
+            {
+                path: "/hero/:id",
+                element: <HeroPage/>,
+
             },
 
         ]
