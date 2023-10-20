@@ -24,8 +24,8 @@ function NavBarExample() {
                                       as={Link} to={"/marvel"}>Marvel</Nav.Link>
                             <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                                       as={Link} to={"/dc"}>DC</Nav.Link>
-             {/*               <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
-                                      as={Link} to={"/login"}>login</Nav.Link>*/}
+                            <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
+                                      as={Link} to={"/search"}>Search</Nav.Link>
                         </Nav>
                         <Nav>
                             <span className="nav-item nav-link text-primary"> Santiago</span>
