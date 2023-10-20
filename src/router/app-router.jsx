@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
 
             },
             {
-                path: "/search/:id",
+                path: "/search",
                 element: <SearchPage/>,
 
             },
