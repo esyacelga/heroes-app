@@ -3,9 +3,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link, Outlet, useNavigate} from "react-router-dom";
 import {Button} from "react-bootstrap";
+import {useContext} from "react";
+import {AuthContext} from "../../auth/index.js";
 
 function NavBarExample() {
     const navigate = useNavigate();
+    const {user} = useContext(AuthContext);
+    console.log(user);
     const onlogout = () => {
         navigate('/login', {replace: true});
     }
@@ -18,8 +22,6 @@ function NavBarExample() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
-                                      as={Link} to={"/"}>Home</Nav.Link>
                             <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                                       as={Link} to={"/marvel"}>Marvel</Nav.Link>
                             <Nav.Link className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}

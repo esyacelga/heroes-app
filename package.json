@@ -1,7 +1,7 @@
 {
   "name": "heroes-spa",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -26,5 +26,10 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.5"
-  }
+  },
+  "description": "Proyecto para aprender REACT",
+  "main": "index.js",
+  "repository": "https://github.com/esyacelga/heroes-app.git",
+  "author": "Santiago Yacelga",
+  "license": "MIT"
 }
