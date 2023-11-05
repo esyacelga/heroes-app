@@ -8,10 +8,12 @@ import {AuthContext} from "../../auth/index.js";
 
 function NavBarExample() {
     const navigate = useNavigate();
-    const {user} = useContext(AuthContext);
+    const {user, logout} = useContext(AuthContext);
     console.log(user);
     const onlogout = () => {
         navigate('/login', {replace: true});
+        logout();
+
     }
     return (
 
