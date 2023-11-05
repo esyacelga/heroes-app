@@ -30,7 +30,7 @@ function NavBarExample() {
                                       as={Link} to={"/search"}>Search</Nav.Link>
                         </Nav>
                         <Nav>
-                            <span className="nav-item nav-link text-primary"> Santiago</span>
+                            <span className="nav-item nav-link text-primary"> {user?.name}</span>
                             <Button className="nav-item nav-link btn" onClick={onlogout}>Cerrar sesión</Button>
                         </Nav>
                     </Navbar.Collapse>

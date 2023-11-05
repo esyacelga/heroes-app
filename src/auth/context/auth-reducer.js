@@ -3,17 +3,18 @@ import {types} from "../types/types.js";
 const initialState = {
     logged: false
 }
-export const authReducer = (state = {}, action) => {
-    switch (action.type) {
-        case types.loguin:
+export const authReducer = (estado = {}, action) => {
+    console.log('Me han llamado');
+    switch (action.types) {
+        case types.login:
             return {
-                ...state,
+                ...estado,
                 logged: true,
-                name: action.payLoad
+                user: action.payLoad
             };
         case types.logout:
             return {
-                ...state,
+                ...estado,
                 logged: false
             };
         default:
