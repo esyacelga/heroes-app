@@ -3,6 +3,8 @@ import NavBarExample from "../ui/components/nav-bar.jsx";
 import {DcPage, HeroPage, MarvelPage} from "../heroes/index.js";
 import {LoginPage} from "../auth/index.js";
 import {SearchPage} from "../heroes/pages/search-page.jsx";
+import {PrivateRoute} from "./private-route.jsx";
+import {PublicRoute} from "./public-route.jsx";
 
 
 export const router = createBrowserRouter([
@@ -13,7 +15,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/marvel",
-                element: <MarvelPage/>,
+                element: <PrivateRoute><MarvelPage/></PrivateRoute>,
             },
             {
                 path: "/dc",
@@ -34,6 +36,6 @@ export const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <LoginPage/>,
+        element: <PublicRoute> <LoginPage/></PublicRoute>,
     },
 ]);
