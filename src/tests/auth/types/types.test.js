@@ -1,6 +1,6 @@
-import {types} from "../../auth/types/types.js";
+import {types} from "../../../auth/types/types.js";
 
-describe('Prueas e tyepes.js', ()=>{
+describe('Pruebas e types.js', ()=>{
     test('debe regresar estos types',()=>{
         expect(types).toEqual({
             login:'[Auth] Login',
